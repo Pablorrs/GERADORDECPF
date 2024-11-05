@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Completa: Registro, Login e CPF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Registro -->
+    <div id="registerPage" class="page">
+        <h2>Registrar-se</h2>
+        <input type="text" id="registerUsername" placeholder="Usuário" required>
+        <input type="password" id="registerPassword" placeholder="Senha" required>
+        <button onclick="registerUser()">Registrar</button>
+        <p id="registerMessage"></p>
+        <p>Já tem uma conta? <a href="#" onclick="showLogin()">Fazer login</a></p>
+    </div>
+
+    <!-- Tela de Login -->
+    <div id="loginPage" class="page hidden">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Usuário" required>
+        <input type="password" id="loginPassword" placeholder="Senha" required>
+        <button onclick="loginUser()">Login</button>
+        <p id="loginMessage"></p>
+        <p>Não tem uma conta? <a href="#" onclick="showRegister()">Registrar-se</a></p>
+    </div>
+
+    <!-- Tela de Gerador e Validador de CPF -->
+    <div id="cpfPage" class="page hidden">
+        <h2>Gerador e Validador de CPF</h2>
+        <button onclick="generateCPF()">Gerar CPF</button>
+        <p id="generatedCPF"></p>
+        <input type="text" id="cpfInput" placeholder="Digite o CPF" maxlength="14">
+        <button onclick="validateCPF()">Validar CPF</button>
+        <p id="cpfValidationResult"></p>
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
